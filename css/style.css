@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Bold.ttf);
+    font-weight: 700;
+}
+
+/* reset css */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    background: #17161b;
+    color: #FFF;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+ul {
+    padding-left: 0;
+}
+
+ul>li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header {
+    grid-area: my-header;
+}
+
+.aside {
+    grid-area: my-aside;
+}
+
+.main {
+    grid-area: my-main;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: 
+    "my-header my-header my-header"
+    "my-aside my-main my-main"
+    "my-aside my-main my-main";
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 8rem 0;
+}
+
+.grid-init {
+    max-width: 144rem;
+    margin: auto;
+    padding: 3rem 2.4rem 4rem;    
+}
+
+.header__wrap {
+    display: flex;
+    align-items: center;
+}
+.header__logo {
+    text-transform: uppercase;
+    font-size: 6.4rem;
+    font-weight: 700;
+    line-height: 117%;
+    margin-right: 7rem;
+}
+.header__nav {
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 117%;
+    margin-right: 9.2rem;
+}
+.header__nav a:not(:last-child) {
+    margin-right: 2rem;
+}
+.header__search {
+    width: 33rem;
+    height: 4.1rem;
+    border-radius: 0.8rem;
+    margin-right: 3.9rem;
+}
+.header__search input {
+    border-radius: 0.8rem;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.08) url('../img/lens.svg');
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    background-position: top 50% right 1.5rem;
+    padding-left: 1rem;
+    padding-right: 4rem;
+    font-size: 2rem;
+    line-height: 115%;
+    color: #FFF;
+    padding-top: .9rem;
+}
+.header__search input::placeholder {
+    font-size: 2rem;
+    line-height: 115%;
+    color: #FFF;
+    opacity: .55;
+}
+.header__time {
+    text-align: center;
+    margin-right: 8.6rem;
+}
+.header__hours {
+    font-size: 2rem;
+    line-height: 115%;
+}
+.header__days {
+    font-size: 1.2rem;
+    line-height: 117%;
+}
+.header__personal {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+.main {}
+
+.main-display {}
+
+.main-display__trailer {
+    position: relative;;
+    width: 100%;
+    height: 20.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url('../img/spider-man.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.6rem;
+    padding-top: 1.9rem;
+    padding-left: 1.9rem;
+}
+
+.main-display__views {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 119%;
+}
+
+.main-display__name {}
+
+.main-display__header {
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 117%;
+}
+
+.main-display__date {
+        font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 114%;
+}
+
+.button-play__wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.07);
+    width: 8.1rem;
+    height: 8.1rem;
+    border-radius: 50%;
+}
+
+.button-play {}
+
+.main-display__trending {}
